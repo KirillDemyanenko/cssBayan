@@ -5,8 +5,8 @@
 }
 
 html {
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(89, 84, 84) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(89, 84, 84) 100%);
     color: white;
     min-height: 100vh;
     cursor: url("https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png"), auto;
@@ -43,11 +43,11 @@ section {
 }
 
 section:hover {
-    transition: 3s;
-    overflow: visible;
-    height: 100%;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
-    background: black;
 }
 
 label {
@@ -78,7 +78,50 @@ input:not(:checked):before {
 }
 
 img {
-    margin: 25px auto;
-    width: 20vw;
-    aspect-ratio: auto;
+    margin: 25px auto 0 auto;
+    max-height: calc(100% - 75px);
+    object-fit: contain;
+}
+
+@media (max-width: 1279px) {
+    main {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 1139px) {
+    main {
+        width: 820px;
+    }
+}
+
+@media (max-width: 819px) {
+    main {
+        width: 620px;
+    }
+}
+
+@media (max-width: 619px) {
+    html {
+        min-height: auto;
+    }
+
+    main {
+        width: 460px;
+    }
+}
+
+@media (max-width: 459px) {
+    html {
+        min-height: auto;
+    }
+
+    main {
+        width: 320px;
+    }
+}
+
+@keyframes anim {
+    from {height: 50px}
+    to {height: 400px}
 }
