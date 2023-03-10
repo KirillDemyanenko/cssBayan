@@ -32,9 +32,10 @@ main {
 main:hover > section > input {
     visibility: visible;
 }
+
 main:hover > section > label {
     font-weight: bold;
-    color: #c4ff12;
+    color: #6e8537;
 }
 
 section:hover > img {
@@ -53,6 +54,7 @@ section {
     flex-wrap: wrap;
     overflow: hidden;
     border: 2px solid #ffffff;
+    border-radius: 10px;
 }
 
 section:hover {
@@ -98,7 +100,7 @@ section:has(input:checked) > img {
 
 section:has(input:checked) > label {
     font-weight: bold;
-    color: #c4ff12;
+    color: #6e8537;
 }
 
 input:checked:before {
