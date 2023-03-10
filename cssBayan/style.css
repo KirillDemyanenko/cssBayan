@@ -9,6 +9,7 @@ html {
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(89, 84, 84) 100%);
     color: white;
     min-height: 100vh;
+    cursor: url("https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png"), auto;
 }
 
 h1 {
@@ -25,13 +26,12 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    cursor: pointer;
     gap: 5px;
 }
 
 section {
     background-color: #6c5f5f;
-    cursor: pointer;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -43,9 +43,11 @@ section {
 }
 
 section:hover {
+    transition: 3s;
     overflow: visible;
-    height: auto;
-    cursor: pointer;
+    height: 100%;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
+    background: black;
 }
 
 label {
@@ -53,21 +55,23 @@ label {
     display: flex;
     width: 90%;
     align-items: center;
-    cursor: pointer;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
 }
 
 input {
     display: flex;
     width: 10%;
     height: 20px;
-    cursor: pointer;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
     appearance: none;
     font-size: 20px;
 }
+
 input:checked:before {
     content: '😸';
     padding-left: 10px;
 }
+
 input:not(:checked):before {
     content: '😼';
     padding-left: 10px;
@@ -75,4 +79,6 @@ input:not(:checked):before {
 
 img {
     margin: 25px auto;
+    width: 20vw;
+    aspect-ratio: auto;
 }
