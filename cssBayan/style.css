@@ -40,7 +40,7 @@ main:hover > section > label {
 section:hover > img {
     display: flex;
     height: calc(100% - 75px);
-    margin: 25px auto 0 auto;
+    margin: 5px auto 0 auto;
     object-fit: contain;
 }
 
@@ -92,17 +92,13 @@ section:has(input:checked) {
 section:has(input:checked) > img {
     display: flex;
     height: calc(100% - 75px);
-    margin: 25px auto 0 auto;
+    margin: 5px auto 0 auto;
     object-fit: contain;
 }
 
 section:has(input:checked) > label {
     font-weight: bold;
     color: #c4ff12;
-}
-
-section:has(input:not(:checked)) > img {
-    display: none;
 }
 
 input:checked:before {
