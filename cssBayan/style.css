@@ -40,6 +40,7 @@ main:hover > section > label {
 
 section:hover > img {
     display: flex;
+    transition-delay: 0.5s;
     height: calc(100% - 75px);
     margin: 5px auto 0 auto;
     object-fit: contain;
@@ -50,6 +51,8 @@ section {
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
     display: flex;
     width: 100%;
+    transition: 2s;
+    height: 50px;
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
@@ -114,7 +117,10 @@ input:not(:checked):before {
 }
 
 img {
-    display: none;
+    display: flex;
+    transition: 2s;
+    height: 0;
+    margin: 0 auto;
 }
 
 @media (max-width: 1279px) {
