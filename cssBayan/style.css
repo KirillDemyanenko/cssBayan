@@ -107,12 +107,12 @@ section:has(input:checked) > label {
 }
 
 input:checked:before {
-    content: '😸';
+    content: '✔️';
     padding-left: 10px;
 }
 
 input:not(:checked):before {
-    content: '😼';
+    content: '❌';
     padding-left: 10px;
 }
 
