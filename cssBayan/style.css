@@ -29,6 +29,21 @@ main {
     gap: 5px;
 }
 
+main:hover > section > input {
+    visibility: visible;
+}
+main:hover > section > label {
+    font-weight: bold;
+    color: #c4ff12;
+}
+
+section:hover > img {
+    display: flex;
+    height: calc(100% - 75px);
+    margin: 25px auto 0 auto;
+    object-fit: contain;
+}
+
 section {
     background-color: #6c5f5f;
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
@@ -36,35 +51,58 @@ section {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px;
-    height: 50px;
     overflow: hidden;
     border: 2px solid #ffffff;
 }
 
 section:hover {
-    animation-name: anim;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    transition: 3s;
+    height: 450px;
+    background-color: black;
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
 }
 
 label {
-    height: 20px;
+    height: 50px;
     display: flex;
+    padding-left: 50px;
     width: 90%;
     align-items: center;
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
 }
 
 input {
-    display: flex;
     width: 10%;
-    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
     appearance: none;
     font-size: 20px;
+    visibility: hidden;
+}
+
+section:has(input:checked) {
+    height: 450px;
+    background-color: black;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
+}
+
+section:has(input:checked) > img {
+    display: flex;
+    height: calc(100% - 75px);
+    margin: 25px auto 0 auto;
+    object-fit: contain;
+}
+
+section:has(input:checked) > label {
+    font-weight: bold;
+    color: #c4ff12;
+}
+
+section:has(input:not(:checked)) > img {
+    display: none;
 }
 
 input:checked:before {
@@ -78,9 +116,7 @@ input:not(:checked):before {
 }
 
 img {
-    margin: 25px auto 0 auto;
-    max-height: calc(100% - 75px);
-    object-fit: contain;
+    display: none;
 }
 
 @media (max-width: 1279px) {
@@ -119,9 +155,4 @@ img {
     main {
         width: 320px;
     }
-}
-
-@keyframes anim {
-    from {height: 50px}
-    to {height: 400px}
 }
