@@ -1,17 +1,91 @@
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box;*/
-/*    font-size: 18px;*/
-/*}*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
 
-/*html {*/
-/*    background: rgb(0, 0, 0);*/
-/*    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(89, 84, 84) 100%);*/
-/*    color: white;*/
-/*    min-height: 100vh;*/
-/*    cursor: url("https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png"), auto;*/
-/*}*/
+html {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(89, 84, 84) 100%);
+    color: white;
+    min-height: 100vh;
+    cursor: url("https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png"), auto;
+}
+
+body {
+    display: flex;
+    margin: 0 auto;
+    width: 90vw;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1vh;
+}
+
+h1 {
+    display: flex;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 1vh auto 3vh 0;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+label {
+    display: flex;
+    transition: 1.5s;
+    width: 100%;
+    height: 4em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: cadetblue;
+    align-items: center;
+}
+
+img {
+    margin: 1em auto;
+    height: 0;
+    object-fit: cover;
+}
+
+p {
+    display: flex;
+    padding-left: 2em;
+    width: calc(95% - 2em);
+    height: 4em;
+    align-items: center;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    transition: 1.5s;
+    align-items: center;
+    width: 1em;
+    height: 1em;
+    padding-top: 1em;
+}
+
+label:has(input:checked),
+label:hover {
+    transition: 1.5s;
+    height: 28em;
+}
+
+label:has(input:checked) > span,
+label:hover > span {
+    transition: 1.5s;
+    transform: rotate(45deg);
+}
+
+label:has(input:checked) > img,
+label:hover > img {
+    transition: 1.5s;
+    height: 20em;
+}
 
 /*h1 {*/
 /*    font-size: 3em;*/
