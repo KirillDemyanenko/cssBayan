@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
 }
 
 html {
@@ -15,8 +16,7 @@ html {
 h1 {
     font-size: 3em;
     font-weight: 700;
-    margin: 20px;
-    text-align: center;
+    margin: 1vh auto 3vh 0;
 }
 
 main {
@@ -41,7 +41,7 @@ main:hover > section > label {
 section:hover > img {
     display: flex;
     transition-delay: 0.5s;
-    height: calc(100% - 5vh);
+    height: 35vh;
     margin: 1vh auto 0 auto;
     object-fit: contain;
 }
@@ -62,7 +62,7 @@ section {
 
 section:hover {
     transition: 3s;
-    height: 40vh;
+    height: 50vh;
     background-color: black;
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
 }
@@ -96,7 +96,7 @@ section:has(input:checked) {
 
 section:has(input:checked) > img {
     display: flex;
-    height: calc(100% - 15vh);
+    height: 35vh;
     margin: 2vh auto 2vh auto;
     object-fit: contain;
 }
@@ -118,45 +118,56 @@ input:not(:checked):before {
 
 img {
     display: flex;
-    transition: 2s;
+    transition: 1s;
     height: 0;
     margin: 0 auto;
 }
 
-/*@media (max-width: 1279px) {*/
-/*    main {*/
-/*        width: 1140px;*/
-/*    }*/
-/*}*/
+@media (max-width: 819px) {
+    * {
+        font-size: 14px;
+    }
+    section:has(input:checked) > img {
+        display: flex;
+        height: 35vw;
+        margin: 2vh auto 2vh auto;
+        object-fit: contain;
+    }
+}
 
-/*@media (max-width: 1139px) {*/
-/*    main {*/
-/*        width: 820px;*/
-/*    }*/
-/*}*/
+@media (max-width: 420px) {
+    * {
+        font-size: 10px;
+    }
+}
 
-/*@media (max-width: 819px) {*/
-/*    main {*/
-/*        width: 620px;*/
-/*    }*/
-/*}*/
+@media (max-device-width : 1024px) {
+    main > section > input {
+        visibility: visible;
+    }
+    section:has(input:not(:checked)){
+        background-color: #6c5f5f;
+        cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
+        display: flex;
+        width: 100%;
+        transition: 2s;
+        height: 4vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        border: 0.2vh solid #ffffff;
+        border-radius: 1vh;
+    }
+    section:has(input:checked) {
+        height: 50vh;
+        background-color: black;
+        cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), default;
+    }
 
-/*@media (max-width: 619px) {*/
-/*    html {*/
-/*        min-height: auto;*/
-/*    }*/
-
-/*    main {*/
-/*        width: 460px;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 459px) {*/
-/*    html {*/
-/*        min-height: auto;*/
-/*    }*/
-
-/*    main {*/
-/*        width: 320px;*/
-/*    }*/
-/*}*/
+    section:has(input:checked) > img {
+        display: flex;
+        height: 35vh;
+        margin: 2vh auto 2vh auto;
+        object-fit: contain;
+    }
+}
