@@ -63,6 +63,9 @@ label {
     flex-wrap: wrap;
     background: cadetblue;
     align-items: flex-start;
+    border: 0.15em solid white;
+    border-radius: 0.1em 0.7em 0.1em 0.7em;
+    box-shadow: 0.5em 0.3em 0.5em #5F9EA0FF;
 }
 
 img {
@@ -76,7 +79,7 @@ p {
     display: flex;
     font-weight: 700;
     padding-left: 2em;
-    width: calc(95% - 2em);
+    width: calc(100% - 3em);
     height: 4em;
     align-items: center;
 }
@@ -85,7 +88,7 @@ span {
     display: flex;
     transition: 0.5s;
     justify-content: center;
-    font-weight: 700;
+    font-weight: 900;
     align-items: center;
     font-size: 1.5em;
     width: 2em;
