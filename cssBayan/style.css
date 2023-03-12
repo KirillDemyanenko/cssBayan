@@ -15,28 +15,38 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
     margin: 0 auto;
     width: 60vw;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     gap: 1vh;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
-body:hover > label > span {
+main:hover > label > span {
     visibility: visible;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
-body:hover > label:has(input:not(:checked)) > p,
-body:hover > label:has(input:not(:checked)) > span {
+main:hover > label:has(input:not(:checked)) > p,
+main:hover > label:has(input:not(:checked)) > span {
     color: black;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
 h1 {
     display: flex;
     font-size: 3em;
+    width: 60vw;
     font-weight: 700;
-    margin: 1vh auto 3vh 0;
+    margin: 1vh auto 2vh auto;
+    cursor: url("https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png"), auto;
 }
 
 input[type='radio'] {
@@ -92,12 +102,14 @@ label:has(input:checked),
 label:hover {
     transition: 1s;
     height: 28em;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
 label:active > span,
 label:active > p {
     transition: 0s;
     color: white;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
 label:active > img {
@@ -111,12 +123,14 @@ label:hover > span {
     padding-top: 0;
     padding-left: 0.5em;
     transform: rotate(45deg);
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
 label:has(input:checked) > img,
 label:hover > img {
     transition: 1s;
     height: 20em;
+    cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
 /*h1 {*/
