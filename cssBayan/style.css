@@ -133,14 +133,15 @@ label:hover > img {
     cursor: url("https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png"), pointer;
 }
 
-/*@media (max-width: 819px) {*/
+@media (max-device-width: 820px) {
+    * {
+        font-size: 15px;
+    }
+}
 
-/*}*/
+@media (max-device-width: 374px) {
+    * {
+        font-size: 12px;
+    }
+}
 
-/*@media (max-width: 420px) {*/
-
-/*}*/
-
-/*@media (max-device-width : 1024px) {*/
-
-/*}*/
